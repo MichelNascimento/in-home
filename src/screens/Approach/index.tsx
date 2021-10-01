@@ -1,7 +1,11 @@
 import React from 'react'
 import { Container, ApproachText, ApproachParagraph, Button, ButtonText, ApproachImage } from './styles'
 
-const Approach = () => (
+type ApproachProps = {
+    navigation: any
+}
+
+const Approach: React.FC<ApproachProps> = ({ navigation }) => (
     <Container>
         <ApproachImage
             source={require('../../../assets/images/imgGarden.png')}
@@ -17,7 +21,12 @@ const Approach = () => (
                 Sign up
             </ButtonText>
         </Button>
-        <Button>
+        <Button
+            onPress={() =>
+                navigation.navigate('Login')
+            }
+            underlayColor='none'
+        >
             <ButtonText>
                 Sign in
             </ButtonText>

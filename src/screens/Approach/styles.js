@@ -3,7 +3,7 @@ import { colors } from '../../constants/colors'
 
 export const Container = styled.View`
     flex: 1;
-    background-color: #f7f7f7;
+    background-color: ${colors.light};
     align-items: center;
 `
 
@@ -16,7 +16,7 @@ export const ApproachImage = styled.Image`
 export const ApproachText = styled.Text`
     font-size: 28px;
     font-weight: 600;
-    color: #3F3D56;
+    color: ${colors.dark};
     margin-top: 64px;
 `
 
@@ -24,7 +24,7 @@ export const ApproachParagraph = styled.Text`
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
-    color: #3F3D56BF;
+    color: ${colors.textSecondary};
     text-align: center;
     max-width: 300px;
     margin-top: 24px;
