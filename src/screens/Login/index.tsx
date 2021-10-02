@@ -1,8 +1,8 @@
 import React from 'react'
-import Icon from 'react-native-vector-icons/MaterialIcons'
 
-import { Container, ImageLogo, Header } from './styles'
-import { colors } from '../../constants/colors'
+import { Container } from './styles'
+
+import Header from '../../components/Header'
 
 type LoginProps = {
     navigation: any
@@ -10,19 +10,11 @@ type LoginProps = {
 
 const Login: React.FC<LoginProps> = ({ navigation }) => (
     <Container>
-        <Header>
-            <Icon
-                name="arrow-back-ios"
-                size={40}
-                color={colors.dark}
-                onPress={() => (
-                    navigation.navigate('Approach')
-                )}
-            />
-            <ImageLogo
-                source={require('../../../assets/images/imgGarden.png')}
-            />
-        </Header>
+        <Header 
+            onIconPress={() => (
+                navigation.navigate('Approach')
+            )}
+        />
     </Container>
 )
 
