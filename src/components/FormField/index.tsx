@@ -4,14 +4,14 @@ import { Label, Input } from './styles'
 
 type FormFieldProps = {
     labelText: string
-    securityTextEntry?: boolean
+    secureTextEntry?: boolean
 }
 
-const FormField: React.FC<FormFieldProps> = ({ labelText, securityTextEntry }) => (
+const FormField: React.FC<FormFieldProps> = ({ labelText, secureTextEntry }) => (
     <React.Fragment>
         <Label>{labelText}</Label>
         <Input
-            secureTextEntry={securityTextEntry}
+            secureTextEntry={secureTextEntry}
         />
     </React.Fragment>
 )

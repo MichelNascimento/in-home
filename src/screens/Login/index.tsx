@@ -23,7 +23,7 @@ const Login: React.FC<LoginProps> = ({ navigation }) => (
             />
             <FormField
                 labelText="Password"
-                securityTextEntry
+                secureTextEntry
             />
             <Button 
                 isPrimary
