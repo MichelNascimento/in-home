@@ -29,20 +29,3 @@ export const ApproachParagraph = styled.Text`
     max-width: 300px;
     margin-top: 24px;
 `
-
-export const Button = styled.TouchableHighlight`
-    background-color: ${props => props.primary ? colors.primary : 'transparent'};
-    width: 330px;
-    height: 60px;
-    border-radius: 10px;
-    box-shadow: 8px 8px 32px rgba(0, 0, 0, 0.15);
-    justify-content: center;
-    align-items: center;
-    margin-top: ${props => props.primary ? '40px' : '32px'};
-`
-
-export const ButtonText = styled.Text`
-    font-size: 24px;
-    font-weight: 600;
-    color: ${props => props.primary ? colors.light : colors.primary};
-`

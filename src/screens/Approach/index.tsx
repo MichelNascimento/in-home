@@ -1,5 +1,6 @@
 import React from 'react'
-import { Container, ApproachText, ApproachParagraph, Button, ButtonText, ApproachImage } from './styles'
+import { Container, ApproachText, ApproachParagraph, ApproachImage } from './styles'
+import Button from '../../components/Button'
 
 type ApproachProps = {
     navigation: any
@@ -16,22 +17,19 @@ const Approach: React.FC<ApproachProps> = ({ navigation }) => (
         <ApproachParagraph>
             Get started and create the environment that make you feel better.
         </ApproachParagraph>
-        <Button primary>
-            <ButtonText primary>
-                Sign up
-            </ButtonText>
-        </Button>
         <Button
+            isPrimary
+            text="Sign up"
+        />
+        <Button
+            isPrimary={false}
+            text="Sign in"
             onPress={() =>
                 navigation.navigate('Login')
             }
             underlayColor='none'
-        >
-            <ButtonText>
-                Sign in
-            </ButtonText>
-        </Button>
-    </Container>
+        />
+    </Container >
 )
 
 export default Approach
