@@ -1,8 +1,10 @@
 import React from 'react'
 
-import { Container } from './styles'
+import { Container, FormContainer } from './styles'
 
 import Header from '../../components/Header'
+import FormField from '../../components/FormField'
+import Button from '../../components/Button'
 
 type LoginProps = {
     navigation: any
@@ -10,11 +12,24 @@ type LoginProps = {
 
 const Login: React.FC<LoginProps> = ({ navigation }) => (
     <Container>
-        <Header 
+        <Header
             onIconPress={() => (
                 navigation.navigate('Approach')
             )}
         />
+        <FormContainer>
+            <FormField
+                labelText="E-mail"
+            />
+            <FormField
+                labelText="Password"
+                securityTextEntry
+            />
+            <Button 
+                isPrimary
+                text="Sign in"
+            />
+        </FormContainer>
     </Container>
 )
 
