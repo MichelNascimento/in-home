@@ -35,3 +35,9 @@ export const Input = styled.TextInput`
     font-size: 16px;
     margin: 16px 0;
 `
+
+export const HelpText = styled.Text`
+    font-size: 14px;
+    font-weight: 400;
+    color: ${colors.textSecondary};
+`

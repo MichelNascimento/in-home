@@ -1,15 +1,19 @@
 import React from "react";
 
-import { LabelContainer, IndicatorNumberContainer, IndicatorNumber, Label, Input } from './styles'
+import { LabelContainer, IndicatorNumberContainer, IndicatorNumber, Label, Input, HelpText } from './styles'
 
 type FormFieldProps = {
     labelText: string
     secureTextEntry?: boolean
     hasIndicatorNumber?: boolean
     indicatorNumber?: string
+    hasHelpText?: boolean
+    helpText?: string
 }
 
-const FormField: React.FC<FormFieldProps> = ({ labelText, secureTextEntry, hasIndicatorNumber, indicatorNumber }) => (
+const FormField: React.FC<FormFieldProps> = ({
+    labelText, secureTextEntry, hasIndicatorNumber, indicatorNumber, hasHelpText, helpText
+}) => (
     <React.Fragment>
         <LabelContainer>
             {hasIndicatorNumber && (
@@ -22,6 +26,11 @@ const FormField: React.FC<FormFieldProps> = ({ labelText, secureTextEntry, hasIn
         <Input
             secureTextEntry={secureTextEntry}
         />
+        {hasHelpText && (
+            <HelpText>
+                {helpText}
+            </HelpText>
+        )}
     </React.Fragment>
 )
 
