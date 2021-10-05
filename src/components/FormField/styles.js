@@ -1,11 +1,29 @@
 import styled from 'styled-components'
 import { colors } from '../../constants/colors'
 
+export const LabelContainer = styled.View`
+    flex-direction: row;
+    align-items: center;
+`
+
+export const IndicatorNumberContainer = styled.View`
+    background-color: ${colors.dark};
+    padding: 6px 14px;
+    border-radius: 45;
+`
+
+export const IndicatorNumber = styled.Text`
+    color: ${colors.light};
+    font-weight: 600;
+    font-size: 20;
+`
+
 export const Label = styled.Text`
     font-size: 24px;
     font-weight: 600;
     line-height: 28.15px;
     color: ${colors.dark};
+    margin: 0 8px;
 `
 
 export const Input = styled.TextInput`
