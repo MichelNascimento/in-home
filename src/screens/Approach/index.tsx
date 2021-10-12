@@ -20,6 +20,10 @@ const Approach: React.FC<ApproachProps> = ({ navigation }) => (
         <Button
             isPrimary
             text="Sign up"
+            onPress={() =>
+                navigation.navigate('Register')
+            }
+            underlayColor="none"
         />
         <Button
             isPrimary={false}
@@ -27,7 +31,7 @@ const Approach: React.FC<ApproachProps> = ({ navigation }) => (
             onPress={() =>
                 navigation.navigate('Login')
             }
-            underlayColor='none'
+            underlayColor="none"
         />
     </Container >
 )
