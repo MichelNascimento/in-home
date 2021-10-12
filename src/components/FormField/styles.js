@@ -4,18 +4,19 @@ import { colors } from '../../constants/colors'
 export const LabelContainer = styled.View`
     flex-direction: row;
     align-items: center;
+    margin-top: 24px;
 `
 
 export const IndicatorNumberContainer = styled.View`
     background-color: ${colors.dark};
     padding: 6px 14px;
-    border-radius: 45;
+    border-radius: 45px;
 `
 
 export const IndicatorNumber = styled.Text`
     color: ${colors.light};
     font-weight: 600;
-    font-size: 20;
+    font-size: 20px;
 `
 
 export const Label = styled.Text`
